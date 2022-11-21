@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">This is a survey form</p>
+    <form id="survey-form">
+        <fieldset>
+            <label id="name-label" for="name-label">Enter Your Name: <input class="personal-info" type="text" id="name" name="name" required placeholder="John Doe"></label>
+            <label id="email-label" for="email-label">Enter Your Email:<input class="personal-info" type="email" id="email" name="email" required placeholder="johndoe@email.com"></label>
+            <label id="number-label" for="number-label">Enter Your Age (optional): <input class="personal-info" type="number" id="number" name="number" pattern="^(?=.*[0-9])" min="0" max="999" placeholder="Age"></label>
+        </fieldset>
+        <fieldset>
+            <label for="dropdown">Which one is better?
+                <select id="dropdown" name="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="1">High salary but poor work-life balance</option>
+                    <option value="2">Low salary but good work-life balance</option>
+                </select>
+            </label>
+        </fieldset>
+        <div class="container">
+            <fieldset>
+                <p>What's your gender?
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="male"> Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="female"> Female
+                    </label>
+                    <label for="other">
+                        <input type="radio" id="other" name="gender" value="other"> Other
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <label for="hobbies">What are some hobbies you like to do?
+                    <input type="checkbox" id="reading" name="hobbies" value="reading"> Reading
+                    <input type="checkbox" id="hiking" name="hobbies" value="hiking"> Hiking 
+                    <input type="checkbox" id="diving" name="hobbies" value="diving"> Diving
+                </label>
+            </fieldset>
+        </div>
+        <fieldset>
+            <label for="comments">What are your thoughts on climate change?
+                <textarea id="comments" name="comments" rows="3" columns="30" placeholder="I think its..."></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" id="submit" name="Submit">
+    </form>
+</body>
+</html>
